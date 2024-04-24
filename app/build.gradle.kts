@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    alias(libs.plugins.devtools)
 }
 
 android {
@@ -39,12 +40,42 @@ android {
 }
 
 dependencies {
+    // Modules
     implementation(project(":core"))
     implementation(project(":feature"))
     implementation(project(":feature:cart"))
     implementation(project(":feature:favorites"))
     implementation(project(":feature:menu"))
     implementation(project(":feature:profile"))
+
+    // Network
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.gson)
+    implementation(libs.okhttp.logging.interceptor)
+    implementation(libs.okhttp.core)
+
+    // DI
+    implementation(libs.dagger.core)
+    implementation(libs.dagger.android)
+    ksp(libs.dagger.compiler)
+    ksp(libs.dagger.android.processor)
+    implementation(libs.dagger.android.support)
+    implementation(libs.javax.inject)
+
+    // Navigation
+    implementation(libs.navigation.fragment)
+    implementation(libs.navigation.ui)
+
+    // Biometric
+    implementation(libs.biometric)
+
+    // Firebase
+    implementation(libs.firebase.analytics)
+
+    // Core
+    implementation(libs.lifecycle.ext)
+    implementation(libs.lifecycle.livedata)
+    implementation(libs.lifecycle.viewmodel)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
