@@ -5,5 +5,7 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.Viewer" parent="Base.Theme.Viewer" />
+    <style name="Theme.Viewer" parent="Base.Theme.Viewer">
+        <item name="android:windowBackground">@drawable/ic_splash_image</item>
+    </style>
 </resources>
