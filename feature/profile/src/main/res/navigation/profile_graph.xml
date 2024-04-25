@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_graph"
+    app:startDestination="@id/ProfileFragment">
+    <fragment
+        android:id="@+id/ProfileFragment"
+        android:name="ru.akurbanoff.profile.ui.profile.ProfileFragment"
+        tools:layout="@layout/fragment_profile"
+        android:label="ProfileFragment">
+        <action
+            android:id="@+id/action_CartFragment_to_HistoryFragment"
+            app:destination="@id/HistoryFragment"/>
+        <action
+            android:id="@+id/action_CartFragment_to_RewardsFragment"
+            app:destination="@id/RewardsFragment"/>
+        <action
+            android:id="@+id/action_CartFragment_to_SettingsFragment"
+            app:destination="@id/SettingsFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/HistoryFragment"
+        android:name="ru.akurbanoff.profile.ui.history.HistoryFragment"
+        tools:layout="@layout/fragment_history"
+        android:label="HistoryFragment">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/RewardsFragment"
+        android:name="ru.akurbanoff.profile.ui.rewards.RewardsFragment"
+        tools:layout="@layout/fragment_rewards"
+        android:label="RewardsFragment">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/SettingsFragment"
+        android:name="ru.akurbanoff.profile.ui.settings.SettingsFragment"
+        tools:layout="@layout/fragment_settings"
+        android:label="SettingsFragment">
+
+    </fragment>
+</navigation>

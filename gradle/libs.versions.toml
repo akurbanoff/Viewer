@@ -46,12 +46,14 @@ biometric = { group = "androidx.biometric", name = "biometric", version = "1.1.0
 
 # Firebase
 #firebase = { group = "com.google.firebase", name = "firebase-bom", version = "32.8.1" }
-firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics-ktx" }
+firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics-ktx", version = "21.6.2" }
 
 # Core
 lifecycle-ext = { group = "androidx.lifecycle", name = "lifecycle-extensions", version.ref = "lifecycle-ext" }
 lifecycle-livedata = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycle-libs" }
 lifecycle-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle-libs" }
+view-binding = { group = "com.github.kirich1409", name = "viewbindingpropertydelegate", version = "1.5.6" }
+
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
@@ -69,4 +71,5 @@ androidApplication = { id = "com.android.application", version.ref = "agp" }
 jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
 devtools = { id = "com.google.devtools.ksp", version.ref = "devtools" }
+safeargs = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navigation" }
 

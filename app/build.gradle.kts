@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     alias(libs.plugins.devtools)
+    alias(libs.plugins.safeargs)
 }
 
 android {
@@ -47,6 +48,7 @@ dependencies {
     implementation(project(":feature:favorites"))
     implementation(project(":feature:menu"))
     implementation(project(":feature:profile"))
+    implementation(project(":feature:home"))
 
     // Network
     implementation(libs.retrofit)
@@ -75,6 +77,7 @@ dependencies {
     implementation(libs.firebase.analytics)
 
     // Core
+    implementation(libs.view.binding)
     implementation(libs.lifecycle.ext)
     implementation(libs.lifecycle.livedata)
     implementation(libs.lifecycle.viewmodel)

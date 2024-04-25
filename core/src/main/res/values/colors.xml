@@ -7,4 +7,5 @@
     <color name="background">#FF293441</color>
     <color name="secondary">#FF5A7E99</color>
     <color name="primary">#FF34536A</color>
+    <color name="onSurface">#D3D3D3</color>
 </resources>

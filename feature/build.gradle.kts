@@ -33,7 +33,10 @@ android {
 }
 
 dependencies {
-
+    implementation(project(":core"))
+    implementation(libs.navigation.ui)
+    implementation(libs.navigation.fragment)
+    implementation(libs.view.binding)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
