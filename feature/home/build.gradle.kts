@@ -39,6 +39,7 @@ dependencies {
 
     // RxJava
     implementation(libs.rxjava2)
+    implementation(libs.rxandroid)
 
     // DI
     implementation(libs.dagger.core)

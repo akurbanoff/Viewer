@@ -8,7 +8,7 @@ import javax.inject.Singleton
 
 @Module
 class UseCaseProvider {
-    @[Provides Singleton]
+    @[Provides]
     fun provideCoffeeUseCase(
         api: CoffeeApi
     ): CoffeeUseCase = CoffeeUseCase(api)

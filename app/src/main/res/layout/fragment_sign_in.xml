@@ -45,7 +45,7 @@
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="@color/action"
             android:checkable="true"
@@ -84,7 +84,7 @@
             android:backgroundTint="@color/onSurface"
             android:hint="Email"
             android:inputType="text|textNoSuggestions"
-            android:minHeight="44.dp"
+            android:minHeight="48.dp"
             android:padding="12.dp" />
 
         <EditText
@@ -96,7 +96,7 @@
             android:drawableEnd="@drawable/ic_visibility_on"
             android:hint="Password"
             android:inputType="text|textNoSuggestions"
-            android:minHeight="44.dp"
+            android:minHeight="48.dp"
             android:padding="12.dp" />
 
         <TextView
@@ -184,11 +184,11 @@
 
         <FrameLayout
             android:id="@+id/yandex_login"
-            android:layout_width="100.dp"
-            android:layout_height="80.dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
             android:layout_marginEnd="50.dp"
             android:alpha="0.75"
-            android:layout_gravity="end"
             android:background="@drawable/default_shape"
             android:backgroundTint="@color/action">
 

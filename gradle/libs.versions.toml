@@ -1,5 +1,5 @@
 [versions]
-agp = "8.3.2"
+agp = "8.2.2"
 kotlin = "1.9.10"
 devtools = "1.9.10-1.0.13"
 coreKtx = "1.13.0"
@@ -21,6 +21,7 @@ navigation = "2.7.7"
 legacySupportV4 = "1.0.0"
 fragmentKtx = "1.5.6"
 rxjava = "2.2.21"
+rxandroid = "2.1.1"
 
 [libraries]
 
@@ -50,8 +51,10 @@ biometric = { group = "androidx.biometric", name = "biometric", version = "1.1.0
 #firebase = { group = "com.google.firebase", name = "firebase-bom", version = "32.8.1" }
 firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics-ktx", version = "21.6.2" }
 
-# RxJava2
+# Rx
 rxjava2 = { group = "io.reactivex.rxjava2", name = "rxjava", version.ref = "rxjava" }
+rxandroid = { group = "io.reactivex.rxjava2", name = "rxandroid", version.ref = "rxandroid" }
+
 
 # Core
 lifecycle-ext = { group = "androidx.lifecycle", name = "lifecycle-extensions", version.ref = "lifecycle-ext" }

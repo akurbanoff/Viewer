@@ -29,6 +29,10 @@ class RegisterFragment : Fragment(R.layout.fragment_register) {
         binding.signInButton.setOnClickListener {
             navController.popBackStack()
         }
+
+        binding.registerButton.setOnClickListener {
+            navController.navigate(RegisterFragmentDirections.actionRegisterFragmentToHomeFragment())
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

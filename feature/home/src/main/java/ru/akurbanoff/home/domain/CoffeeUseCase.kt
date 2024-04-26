@@ -8,7 +8,7 @@ import javax.inject.Inject
 class CoffeeUseCase @Inject constructor(
     val coffeeApi: CoffeeApi
 ) {
-    suspend fun getCoffees(): NetworkState {
+    fun getCoffees(): NetworkState {
         return runCatching {
             coffeeApi.getCoffees()
         }.mapCatching { response ->

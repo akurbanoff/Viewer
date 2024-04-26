@@ -8,7 +8,7 @@ import javax.inject.Singleton
 
 @Module
 class ApiProvider {
-    @[Provides Singleton]
+    @[Provides]
     fun provideCoffeeApi(
         retrofit: Retrofit
     ): CoffeeApi = retrofit.create(CoffeeApi::class.java)
