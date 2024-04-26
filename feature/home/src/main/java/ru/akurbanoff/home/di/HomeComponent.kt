@@ -3,10 +3,12 @@ package ru.akurbanoff.home.di
 import androidx.annotation.RestrictTo
 import androidx.lifecycle.ViewModel
 import dagger.Subcomponent
+import ru.akurbanoff.home.di.modules.ApiProvider
+import ru.akurbanoff.home.di.modules.UseCaseProvider
 import ru.akurbanoff.home.ui.HomeViewModel
 import kotlin.properties.Delegates.notNull
 
-@Subcomponent
+@Subcomponent(modules = [ApiProvider::class, UseCaseProvider::class])
 interface HomeComponent: HomeDeps {
     override val homeViewModel: HomeViewModel.Factory
 

@@ -34,7 +34,7 @@ class NetworkModule {
         okHttpClient: OkHttpClient
     ): Retrofit{
         return Retrofit.Builder()
-            .baseUrl("https://api.sampleapis.com/coffee/hot")
+            .baseUrl("https://api.sampleapis.com/")
             .client(okHttpClient)
             .build()
     }

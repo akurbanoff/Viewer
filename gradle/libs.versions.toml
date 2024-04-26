@@ -20,12 +20,14 @@ lifecycle-libs = "2.7.0"
 navigation = "2.7.7"
 legacySupportV4 = "1.0.0"
 fragmentKtx = "1.5.6"
+rxjava = "2.2.21"
 
 [libraries]
 
 # Network
 retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
 retrofit-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+retrofit-rxjava-adapter = { group = "com.squareup.retrofit2", name = "adapter-rxjava2", version.ref = "retrofit"}
 okhttp-logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okHttp3" }
 okhttp-core = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okHttp3" }
 
@@ -47,6 +49,9 @@ biometric = { group = "androidx.biometric", name = "biometric", version = "1.1.0
 # Firebase
 #firebase = { group = "com.google.firebase", name = "firebase-bom", version = "32.8.1" }
 firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics-ktx", version = "21.6.2" }
+
+# RxJava2
+rxjava2 = { group = "io.reactivex.rxjava2", name = "rxjava", version.ref = "rxjava" }
 
 # Core
 lifecycle-ext = { group = "androidx.lifecycle", name = "lifecycle-extensions", version.ref = "lifecycle-ext" }

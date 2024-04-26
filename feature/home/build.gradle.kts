@@ -35,6 +35,12 @@ android {
 }
 
 dependencies {
+    implementation(project(":core"))
+
+    // RxJava
+    implementation(libs.rxjava2)
+
+    // DI
     implementation(libs.dagger.core)
     implementation(libs.dagger.android)
     implementation(libs.androidx.legacy.support.v4)
@@ -43,6 +49,12 @@ dependencies {
     ksp(libs.dagger.android.processor)
     implementation(libs.dagger.android.support)
     implementation(libs.javax.inject)
+
+    // Network
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.gson)
+    implementation(libs.okhttp.logging.interceptor)
+    implementation(libs.okhttp.core)
 
     implementation(libs.view.binding)
     implementation(libs.lifecycle.ext)
