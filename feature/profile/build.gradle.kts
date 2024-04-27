@@ -35,6 +35,8 @@ android {
 }
 
 dependencies {
+    implementation(project(":core"))
+
     implementation(libs.dagger.core)
     implementation(libs.dagger.android)
     implementation(libs.androidx.legacy.support.v4)
