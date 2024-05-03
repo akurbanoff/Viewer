@@ -1,22 +1,28 @@
 
 package ru.akurbanoff.home.ui
 
-import androidx.fragment.app.viewModels
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import by.kirich1409.viewbindingdelegate.viewBinding
-import io.reactivex.Scheduler
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.schedulers.Schedulers
 import ru.akurbanoff.home.R
-import ru.akurbanoff.home.di.HomeDepsStore
+import ru.akurbanoff.home.data.models.Coffee
+import ru.akurbanoff.home.databinding.FragmentHomeBinding
 import ru.akurbanoff.home.di.HomeViewModelComponent
+import ru.akurbanoff.home.ui.items.FrequentlyOrderedListAdapter
+import ru.akurbanoff.home.ui.items.NewInRowAdapter
 
-class HomeFragment : Fragment(R.layout.fragment_home) {
-    //private val binding: FragmentHomeBinding by viewBinding()
+class HomeFragment :
+    Fragment(R.layout.fragment_home),
+    NewInRowAdapter.Callback,
+    FrequentlyOrderedListAdapter.Callback
+{
+    private val binding: FragmentHomeBinding by viewBinding()
+    private lateinit var viewModel: HomeViewModel
     companion object {
         fun newInstance() = HomeFragment()
     }
@@ -24,21 +30,48 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val homeComponent = HomeViewModelComponent().homeComponent
+        viewModel.getCoffees()
 
-        val viewModel = homeComponent.homeViewModel.create()
-        val page = 1
-        val coffeeList = viewModel.getCoffees(page = page)
-            .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe()
+        viewModel.state.observe(viewLifecycleOwner){
+            if(it.errorMessage.isNotEmpty()) handleError(it.errorMessage)
+            if(it.coffees.isNotEmpty()) handleData(it.coffees)
+        }
 
+    }
+
+    fun handleError(errorMessage: String){
+
+    }
+
+    fun handleData(list: List<Coffee>){
+        val newInAdapter = NewInRowAdapter(list, this)
+        val newInManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+
+        binding.newInRecycleRow.also {
+            it.hasFixedSize()
+            it.adapter = newInAdapter
+            it.layoutManager = newInManager
+        }
+
+        val frequentlyOrderedAdapter = FrequentlyOrderedListAdapter(list, this)
+        val frequentlyOrderedManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+
+        binding.frequentelyOrderedList.also {
+            it.hasFixedSize()
+            it.adapter = frequentlyOrderedAdapter
+            it.layoutManager = frequentlyOrderedManager
+        }
+    }
+
+    override fun onClickItem(item: Coffee) {
+        val navController = findNavController()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // TODO: Use the ViewModel
+        val homeComponent = HomeViewModelComponent().homeComponent
+        viewModel = homeComponent.homeViewModel.create()
     }
 
     override fun onCreateView(

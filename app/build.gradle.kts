@@ -55,6 +55,7 @@ dependencies {
     implementation(libs.retrofit.gson)
     implementation(libs.okhttp.logging.interceptor)
     implementation(libs.okhttp.core)
+    implementation(libs.retrofit.rxjava.adapter)
 
     // DI
     implementation(libs.dagger.core)

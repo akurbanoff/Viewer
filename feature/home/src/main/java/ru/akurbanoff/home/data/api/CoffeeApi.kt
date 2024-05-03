@@ -1,12 +1,14 @@
 package ru.akurbanoff.home.data.api
 
+import io.reactivex.Observable
+import io.reactivex.Single
 import retrofit2.Response
 import retrofit2.http.GET
 import ru.akurbanoff.home.data.models.Coffee
 
 interface CoffeeApi {
     @GET("coffee/hot")
-    fun getCoffees() : Response<List<Coffee>>
+    fun getCoffees() : Single<Response<List<Coffee>>>
 }
 
 //{

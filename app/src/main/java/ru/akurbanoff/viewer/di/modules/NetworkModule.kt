@@ -5,6 +5,7 @@ import dagger.Provides
 import okhttp3.OkHttp
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import ru.akurbanoff.cart.di.CartComponent
 import ru.akurbanoff.favorites.di.FavoriteComponent
 import ru.akurbanoff.home.di.HomeComponent
@@ -35,6 +36,7 @@ class NetworkModule {
     ): Retrofit{
         return Retrofit.Builder()
             .baseUrl("https://api.sampleapis.com/")
+            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .client(okHttpClient)
             .build()
     }

@@ -150,7 +150,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1f"
+            android:layout_weight="1"
             android:background="@drawable/default_shape"
             android:backgroundTint="@color/action"
             android:text="Small"
@@ -160,7 +160,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="14.dp"
-            android:layout_weight="1f"
+            android:layout_weight="1"
             android:background="@drawable/default_shape"
             android:backgroundTint="@color/action"
             android:text="Medium"
@@ -169,7 +169,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1f"
+            android:layout_weight="1"
             android:background="@drawable/default_shape"
             android:backgroundTint="@color/action"
             android:text="Large"
