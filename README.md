@@ -17,3 +17,4 @@ Default shop app with main product coffee
 
 #### Project Resources
 - coffee api - https://api.sampleapis.com/coffee/hot
+- auth api - https://secrets-api.appbrewery.com/
