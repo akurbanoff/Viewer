@@ -33,7 +33,7 @@ class SignInFragment : Fragment(R.layout.fragment_sign_in) {
         }
 
         binding.loginButton.setOnClickListener {
-            navController.navigate(SignInFragmentDirections.actionSignInFragmentToHomeFragment())
+            navController.navigate(SignInFragmentDirections.actionSignInFragmentToFeatureGraph())
         }
     }
 

@@ -16,7 +16,7 @@ import ru.akurbanoff.viewer.di.DaggerAppComponent
 
 class App: Application() {
     private lateinit var appComponent: AppComponent
-    private lateinit var homeComponent: HomeComponent
+    lateinit var homeComponent: HomeComponent
     private lateinit var favoritesComponent: FavoriteComponent
     private lateinit var cartComponent: CartComponent
     private lateinit var menuComponent: MenuComponent

@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinAndroid)
     alias(libs.plugins.devtools)
     alias(libs.plugins.safeargs)
+    alias(libs.plugins.kotlinx.serialization)
 }
 
 android {
@@ -35,12 +36,13 @@ android {
 
     buildFeatures {
         viewBinding = true
-        dataBinding = true
     }
 }
 
 dependencies {
     implementation(project(":core"))
+
+    implementation(libs.kotlinx.serialization.json)
 
     // RxJava
     implementation(libs.rxjava2)

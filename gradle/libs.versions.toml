@@ -22,6 +22,7 @@ legacySupportV4 = "1.0.0"
 fragmentKtx = "1.5.6"
 rxjava = "2.2.21"
 rxandroid = "2.1.1"
+kotlinx-serialization = "1.6.2"
 
 [libraries]
 
@@ -31,6 +32,7 @@ retrofit-gson = { group = "com.squareup.retrofit2", name = "converter-gson", ver
 retrofit-rxjava-adapter = { group = "com.squareup.retrofit2", name = "adapter-rxjava2", version.ref = "retrofit"}
 okhttp-logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okHttp3" }
 okhttp-core = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okHttp3" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
 
 # DI
 dagger-core = { group = "com.google.dagger", name = "dagger", version.ref = "dagger" }
@@ -80,4 +82,5 @@ jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "k
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
 devtools = { id = "com.google.devtools.ksp", version.ref = "devtools" }
 safeargs = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navigation" }
+kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 

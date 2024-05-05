@@ -33,8 +33,9 @@ class HomeFragment :
         viewModel.getCoffees()
 
         viewModel.state.observe(viewLifecycleOwner){
-            if(it.errorMessage.isNotEmpty()) handleError(it.errorMessage)
-            if(it.coffees.isNotEmpty()) handleData(it.coffees)
+            //if(it.errorMessage.isNotEmpty()) handleError(it.errorMessage)
+            //if(it.coffees.isNotEmpty())
+            handleData(it.coffees)
         }
 
     }
@@ -44,7 +45,10 @@ class HomeFragment :
     }
 
     fun handleData(list: List<Coffee>){
-        val newInAdapter = NewInRowAdapter(list, this)
+        val newInAdapter = NewInRowAdapter()
+        newInAdapter.setData(list)
+        newInAdapter.setCallback(this)
+
         val newInManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
 
         binding.newInRecycleRow.also {
@@ -53,8 +57,10 @@ class HomeFragment :
             it.layoutManager = newInManager
         }
 
-        val frequentlyOrderedAdapter = FrequentlyOrderedListAdapter(list, this)
-        val frequentlyOrderedManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        val frequentlyOrderedAdapter = FrequentlyOrderedListAdapter()
+        frequentlyOrderedAdapter.setData(list)
+        frequentlyOrderedAdapter.setCallback(this)
+        val frequentlyOrderedManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
 
         binding.frequentelyOrderedList.also {
             it.hasFixedSize()

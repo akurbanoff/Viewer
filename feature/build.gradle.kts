@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    alias(libs.plugins.safeargs)
 }
 
 android {
@@ -30,10 +31,21 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    buildFeatures{
+        dataBinding = true
+        viewBinding = true
+    }
 }
 
 dependencies {
     implementation(project(":core"))
+    implementation(project(":feature:cart"))
+    implementation(project(":feature:favorites"))
+    implementation(project(":feature:menu"))
+    implementation(project(":feature:profile"))
+    implementation(project(":feature:home"))
+
     implementation(libs.navigation.ui)
     implementation(libs.navigation.fragment)
     implementation(libs.view.binding)

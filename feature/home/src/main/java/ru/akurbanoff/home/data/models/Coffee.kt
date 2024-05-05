@@ -1,10 +1,14 @@
 package ru.akurbanoff.home.data.models
 
+import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class Coffee(
-    val title: String,
-    val description: String,
-    val ingredients: List<String>,
-    val image: String,
-    val id: Int,
-    var price: Int
+    @SerializedName("title") val title: String,
+    @SerializedName("description") val description: String,
+    @SerializedName("ingredients") val ingredients: List<String>,
+    @SerializedName("image") val image: String,
+    @SerializedName("id") val id: Int,
+    //var price: Int
 )

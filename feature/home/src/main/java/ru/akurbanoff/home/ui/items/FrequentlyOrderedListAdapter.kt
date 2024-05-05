@@ -2,16 +2,24 @@ package ru.akurbanoff.home.ui.items
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import ru.akurbanoff.home.R
 import ru.akurbanoff.home.data.models.Coffee
 import ru.akurbanoff.home.databinding.FrequentlyOrderedItemBinding
 
-class FrequentlyOrderedListAdapter(
-    val mItems: List<Coffee>,
-    val callback: Callback
-) : RecyclerView.Adapter<FrequentlyOrderedListAdapter.ViewHolder>(){
+class FrequentlyOrderedListAdapter: RecyclerView.Adapter<FrequentlyOrderedListAdapter.ViewHolder>(){
+
+    private var mItems: List<Coffee> = emptyList()
+    private var mCallback: Callback? = null
+
+    fun setData(mList: List<Coffee>){
+        mItems = mList
+    }
+
+    fun setCallback(callback: Callback){
+        mCallback = callback
+    }
+
     interface Callback {
         abstract fun onClickItem(item: Coffee)
     }
@@ -19,14 +27,16 @@ class FrequentlyOrderedListAdapter(
     inner class ViewHolder(
         val binding: FrequentlyOrderedItemBinding
     ): RecyclerView.ViewHolder(binding.root){
-
+        fun bind(item: Coffee){
+            binding.itemTitle.text = item.title
+            binding.itemDescription.text = item.description
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
-            DataBindingUtil.inflate(
+            FrequentlyOrderedItemBinding.inflate(
                 LayoutInflater.from(parent.context),
-                R.layout.frequently_ordered_item,
                 parent,
                 false
             )
@@ -38,7 +48,6 @@ class FrequentlyOrderedListAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val item = mItems[position]
-        holder.binding.item = item
+        holder.bind(mItems[position])
     }
 }

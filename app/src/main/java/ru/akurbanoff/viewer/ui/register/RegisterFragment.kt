@@ -31,7 +31,7 @@ class RegisterFragment : Fragment(R.layout.fragment_register) {
         }
 
         binding.registerButton.setOnClickListener {
-            navController.navigate(RegisterFragmentDirections.actionRegisterFragmentToHomeFragment())
+            navController.navigate(RegisterFragmentDirections.actionRegisterFragmentToFeatureGraph())
         }
     }
 

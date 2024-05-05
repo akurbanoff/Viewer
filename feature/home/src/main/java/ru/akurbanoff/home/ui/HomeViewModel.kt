@@ -20,11 +20,11 @@ class HomeViewModel @AssistedInject constructor(
     fun getCoffees(){
         useCase.getCoffees()
             .subscribe ({
-                state.value?.copy(
-                    coffees = it.body() ?: emptyList()
+                state.value = state.value?.copy(
+                    coffees = it.body() ?: listOf(Coffee(title = "Artem", description = "", image = "", ingredients = listOf(""), id = 1))
                 )
             },{
-                state.value?.copy(
+                state.value = state.value?.copy(
                     errorMessage = it.localizedMessage ?: "Something went wrong"
                 )
             })

@@ -21,8 +21,8 @@
         android:label="SignInFragment"
         tools:layout="@layout/fragment_sign_in">
         <action
-            android:id="@+id/action_SignInFragment_to_HomeFragment"
-            app:destination="@id/HomeFragment"/>
+            android:id="@+id/action_SignInFragment_to_FeatureGraph"
+            app:destination="@id/BottomFragment"/>
         <action
             android:id="@+id/action_SignInFragment_toRegisterFragment"
             app:destination="@+id/RegisterFragment"/>
@@ -34,8 +34,8 @@
         android:label="RegisterFragment"
         tools:layout="@layout/fragment_register">
         <action
-            android:id="@+id/action_RegisterFragment_to_HomeFragment"
-            app:destination="@id/HomeFragment"/>
+            android:id="@+id/action_RegisterFragment_to_FeatureGraph"
+            app:destination="@id/BottomFragment"/>
         <action
             android:id="@+id/action_RegisterFragment_to_VerificationFragment"
             app:destination="@+id/VerificationFragment"/>
@@ -47,32 +47,16 @@
         tools:layout="@layout/fragment_verification"
         android:label="VerificationFragment">
         <action
-            android:id="@+id/action_VerificationFragment_to_HomeFragment"
-            app:destination="@id/HomeFragment"/>
+            android:id="@+id/action_VerificationFragment_to_FeatureFraph"
+            app:destination="@id/BottomFragment"/>
     </fragment>
 
     <fragment
-        android:id="@+id/HomeFragment"
-        android:name="ru.akurbanoff.feature.ui.HomeFragment"
-        android:label="HomeFragment"
-        tools:layout="@layout/fragment_home">
-
-        <action
-            android:id="@+id/action_HomeFragment_to_MenuFragment"
-            app:destination="@id/menu_graph" />
-        <action
-            android:id="@+id/action_HomeFragment_to_FavoriteFragment"
-            app:destination="@id/favorite_graph"/>
-        <action
-            android:id="@+id/action_HomeFragment_to_CartFragment"
-            app:destination="@id/cart_graph"/>
-        <action
-            android:id="@+id/action_HomeFragment_to_ProfileFragment"
-            app:destination="@id/profile_graph"/>
+        android:id="@+id/BottomFragment"
+        android:name="ru.akurbanoff.feature.ui.FeatureBottomBarFragment"
+        android:label="BottomFragment"
+        tools:layout="@layout/fragment_feature_bottom_bar">
     </fragment>
 
-    <navigation android:id="@+id/profile_graph"/>
-    <navigation android:id="@+id/favorite_graph"/>
-    <navigation android:id="@id/menu_graph"/>
-    <navigation android:id="@+id/cart_graph"/>
+
 </navigation>

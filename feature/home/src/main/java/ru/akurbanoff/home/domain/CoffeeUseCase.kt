@@ -21,13 +21,13 @@ class CoffeeUseCase @Inject constructor(
         return coffeeApi.getCoffees()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
-            .cache()
-            .map {
-                it.body()?.forEach {
-                    it.price = Random.nextInt(0..10)
-                }
-                it
-            }
+//            .cache()
+//            .map {
+//                it.body()?.forEach {
+//                    it.price = Random.nextInt(0..10)
+//                }
+//                it
+//            }
     }
 //    fun getCoffees(): NetworkState{
 //        return runCatching {
