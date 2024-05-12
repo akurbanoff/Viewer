@@ -7,7 +7,7 @@ import ru.akurbanoff.home.data.models.Coffee
 import ru.akurbanoff.home.R
 import ru.akurbanoff.home.databinding.NewInRowItemBinding
 
-class NewInRowAdapter: RecyclerView.Adapter<NewInRowAdapter.ViewHolder>(){
+internal class NewInRowAdapter: RecyclerView.Adapter<NewInRowAdapter.ViewHolder>(){
 
     private var mItems: List<Coffee> = emptyList()
     private var mCallback: Callback? = null

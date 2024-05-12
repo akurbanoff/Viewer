@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import ru.akurbanoff.cart.R
 
-class ConfirmationFragment : Fragment() {
+internal class ConfirmationFragment : Fragment() {
 
     companion object {
         fun newInstance() = ConfirmationFragment()

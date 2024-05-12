@@ -22,11 +22,11 @@ import javax.inject.Singleton
     MenuComponent::class,
     ProfileComponent::class
 ])
-class NetworkModule {
+open class NetworkModule {
 
     @Provides
     @Singleton
-    fun provideOkHttp(): OkHttpClient{
+    open fun provideOkHttp(): OkHttpClient{
         return OkHttpClient.Builder()
             .addInterceptor(HttpLoggingInterceptor().apply {
                 level = HttpLoggingInterceptor.Level.BODY
@@ -36,7 +36,7 @@ class NetworkModule {
 
     @Provides
     @Singleton
-    fun provideRetrofit(
+    open fun provideRetrofit(
         okHttpClient: OkHttpClient
     ): Retrofit{
         return Retrofit.Builder()

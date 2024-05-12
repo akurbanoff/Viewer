@@ -25,7 +25,7 @@
         </FrameLayout>
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/home_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="12.dp"
@@ -54,7 +54,7 @@
             android:background="@drawable/default_shape"
             android:backgroundTint="@color/onSurface"
             android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/home_title"
             tools:layout_editor_absoluteX="12dp">
 
             <EditText

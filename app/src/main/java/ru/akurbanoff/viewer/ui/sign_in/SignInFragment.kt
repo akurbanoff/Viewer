@@ -12,7 +12,7 @@ import by.kirich1409.viewbindingdelegate.viewBinding
 import ru.akurbanoff.viewer.R
 import ru.akurbanoff.viewer.databinding.FragmentSignInBinding
 
-class SignInFragment : Fragment(R.layout.fragment_sign_in) {
+internal class SignInFragment : Fragment(R.layout.fragment_sign_in) {
     private val binding: FragmentSignInBinding by viewBinding()
     private val viewModel: SignInViewModel by viewModels()
     private lateinit var navController: NavController

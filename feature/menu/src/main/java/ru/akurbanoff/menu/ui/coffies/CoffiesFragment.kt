@@ -8,10 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import ru.akurbanoff.menu.R
 
-class CoffiesFragment : Fragment() {
+internal class CoffeesFragment : Fragment() {
 
     companion object {
-        fun newInstance() = CoffiesFragment()
+        fun newInstance() = CoffeesFragment()
     }
 
     private val viewModel: CoffiesViewModel by viewModels()

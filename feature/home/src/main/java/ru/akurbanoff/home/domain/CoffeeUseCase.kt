@@ -10,14 +10,15 @@ import retrofit2.Response
 import ru.akurbanoff.core.NetworkState
 import ru.akurbanoff.home.data.api.CoffeeApi
 import ru.akurbanoff.home.data.models.Coffee
+import ru.akurbanoff.home.domain.interfaces.CoffeeUseCaseInterface
 import javax.inject.Inject
 import kotlin.random.Random
 import kotlin.random.nextInt
 
 class CoffeeUseCase @Inject constructor(
-    val coffeeApi: CoffeeApi
-) {
-    fun getCoffees() : Single<Response<List<Coffee>>>{
+    private val coffeeApi: CoffeeApi
+): CoffeeUseCaseInterface {
+    override fun getCoffees() : Single<Response<List<Coffee>>>{
         return coffeeApi.getCoffees()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())

@@ -14,7 +14,7 @@ import kotlinx.coroutines.launch
 import ru.akurbanoff.viewer.R
 import ru.akurbanoff.viewer.databinding.FragmentSplashBinding
 
-class SplashFragment : Fragment(R.layout.fragment_splash) {
+internal class SplashFragment : Fragment(R.layout.fragment_splash) {
     private val viewModel: SplashViewModel by viewModels()
     private val binding: FragmentSplashBinding by viewBinding()
 

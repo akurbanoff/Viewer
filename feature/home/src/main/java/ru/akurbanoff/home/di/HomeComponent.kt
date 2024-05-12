@@ -21,7 +21,6 @@ interface HomeComponent: HomeDeps {
 interface HomeDeps {
     val homeViewModel: HomeViewModel.Factory
 }
-
 interface HomeDepsProvider{
     @get:RestrictTo(RestrictTo.Scope.LIBRARY)
     val deps: HomeDeps

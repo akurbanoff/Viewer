@@ -16,7 +16,7 @@ import ru.akurbanoff.home.di.HomeViewModelComponent
 import ru.akurbanoff.home.ui.items.FrequentlyOrderedListAdapter
 import ru.akurbanoff.home.ui.items.NewInRowAdapter
 
-class HomeFragment :
+internal class HomeFragment :
     Fragment(R.layout.fragment_home),
     NewInRowAdapter.Callback,
     FrequentlyOrderedListAdapter.Callback

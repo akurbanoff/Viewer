@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import ru.akurbanoff.favorites.R
 
-class FavoritesFragment : Fragment() {
+internal class FavoritesFragment : Fragment() {
 
     companion object {
         fun newInstance() = FavoritesFragment()

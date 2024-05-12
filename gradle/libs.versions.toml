@@ -23,6 +23,12 @@ fragmentKtx = "1.5.6"
 rxjava = "2.2.21"
 rxandroid = "2.1.1"
 kotlinx-serialization = "1.6.2"
+truth = "1.0.1"
+mockito = "3.8.0"
+mockito-kotlin = "2.1.0"
+core-testing = "2.1.0"
+test = "1.4.0"
+robolectric = "4.12"
 
 [libraries]
 
@@ -64,10 +70,21 @@ lifecycle-livedata = { group = "androidx.lifecycle", name = "lifecycle-livedata-
 lifecycle-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle-libs" }
 view-binding = { group = "com.github.kirich1409", name = "viewbindingpropertydelegate", version = "1.5.6" }
 
-androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+# Test
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-espresso-contrib = { group = "androidx.test.espresso", name = "espresso-contrib", version.ref = "espressoCore" }
+google-truth = { group = "com.google.truth", name = "truth", version.ref = "truth" }
+mockito = { group = "org.mockito", name = "mockito-core", version.ref = "mockito" }
+mockito-kotlin = { group = "com.nhaarman.mockitokotlin2", name = "mockito-kotlin", version.ref = "mockito-kotlin" }
+test-core = { group = "androidx.arch.core", name = "core-testing", version.ref = "core-testing" }
+androidx-test-runner = { group = "androidx.test", name = "runner", version.ref = "test" }
+androidx-test-rules = { group = "androidx.test", name = "rules", version.ref = "test" }
+robolectric = { group = "org.robolectric", name = "robolectric", version.ref = "robolectric" }
+
+# Android Core
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }

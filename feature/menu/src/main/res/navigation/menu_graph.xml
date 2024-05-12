@@ -6,7 +6,7 @@
     app:startDestination="@id/MenuFragment">
     <fragment
         android:id="@+id/MenuFragment"
-        android:name="ru.akurbanoff.menu.ui.coffies.CoffiesFragment"
+        android:name="ru.akurbanoff.menu.ui.coffies.CoffeesFragment"
         android:label="CoffiesFragment"
         tools:layout="@layout/fragment_coffies">
     </fragment>

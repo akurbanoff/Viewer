@@ -7,7 +7,7 @@ import ru.akurbanoff.home.domain.CoffeeUseCase
 import javax.inject.Singleton
 
 @Module
-class UseCaseProvider {
+internal class UseCaseProvider {
     @[Provides]
     fun provideCoffeeUseCase(
         api: CoffeeApi

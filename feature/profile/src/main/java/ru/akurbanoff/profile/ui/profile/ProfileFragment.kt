@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import ru.akurbanoff.profile.R
 
-class ProfileFragment : Fragment() {
+internal class ProfileFragment : Fragment() {
 
     companion object {
         fun newInstance() = ProfileFragment()

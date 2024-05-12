@@ -14,7 +14,7 @@ import ru.akurbanoff.viewer.databinding.FragmentRegisterBinding
 import ru.akurbanoff.viewer.databinding.FragmentSignInBinding
 import ru.akurbanoff.viewer.ui.sign_in.SignInViewModel
 
-class RegisterFragment : Fragment(R.layout.fragment_register) {
+internal class RegisterFragment : Fragment(R.layout.fragment_register) {
     private val binding: FragmentRegisterBinding by viewBinding()
     private val viewModel: RegisterViewModel by viewModels()
     private lateinit var navController: NavController

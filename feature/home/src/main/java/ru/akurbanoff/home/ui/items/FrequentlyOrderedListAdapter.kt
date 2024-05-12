@@ -7,7 +7,7 @@ import ru.akurbanoff.home.R
 import ru.akurbanoff.home.data.models.Coffee
 import ru.akurbanoff.home.databinding.FrequentlyOrderedItemBinding
 
-class FrequentlyOrderedListAdapter: RecyclerView.Adapter<FrequentlyOrderedListAdapter.ViewHolder>(){
+internal class FrequentlyOrderedListAdapter: RecyclerView.Adapter<FrequentlyOrderedListAdapter.ViewHolder>(){
 
     private var mItems: List<Coffee> = emptyList()
     private var mCallback: Callback? = null

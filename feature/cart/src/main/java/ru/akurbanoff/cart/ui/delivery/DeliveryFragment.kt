@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import ru.akurbanoff.cart.R
 
-class DeliveryFragment : Fragment() {
+internal class DeliveryFragment : Fragment() {
 
     companion object {
         fun newInstance() = DeliveryFragment()

@@ -7,7 +7,7 @@ import ru.akurbanoff.home.data.api.CoffeeApi
 import javax.inject.Singleton
 
 @Module
-class ApiProvider {
+internal class ApiProvider {
     @[Provides]
     fun provideCoffeeApi(
         retrofit: Retrofit

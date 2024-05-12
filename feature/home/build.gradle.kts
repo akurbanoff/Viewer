@@ -74,7 +74,19 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+
+    // Unit Test
+    testImplementation(libs.mockito)
     testImplementation(libs.junit)
+    testImplementation(libs.test.core)
+    testImplementation(libs.google.truth)
+    testImplementation(libs.mockito.kotlin)
+
+    // UI Test
+    //androidTestImplementation(libs.robolectric)
+    androidTestImplementation(libs.androidx.espresso.contrib)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(libs.androidx.test.runner)
+    androidTestImplementation(libs.androidx.test.rules)
 }

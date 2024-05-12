@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import ru.akurbanoff.viewer.R
 
-class VerificationFragment : Fragment() {
+internal class VerificationFragment : Fragment() {
 
     companion object {
         fun newInstance() = VerificationFragment()

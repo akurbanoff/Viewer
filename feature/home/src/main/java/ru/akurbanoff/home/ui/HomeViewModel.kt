@@ -1,5 +1,6 @@
 package ru.akurbanoff.home.ui
 
+import android.annotation.SuppressLint
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -10,22 +11,24 @@ import kotlinx.coroutines.launch
 import ru.akurbanoff.core.NetworkState
 import ru.akurbanoff.home.data.models.Coffee
 import ru.akurbanoff.home.domain.CoffeeUseCase
+import ru.akurbanoff.home.domain.interfaces.CoffeeUseCaseInterface
 
 class HomeViewModel @AssistedInject constructor(
-    private val useCase: CoffeeUseCase
+    private val useCase: CoffeeUseCaseInterface
 ) : ViewModel() {
 
     val state = MutableLiveData(HomeState())
 
+    @SuppressLint("CheckResult")
     fun getCoffees(){
         useCase.getCoffees()
-            .subscribe ({
+            .subscribe ({ response ->
                 state.value = state.value?.copy(
-                    coffees = it.body() ?: listOf(Coffee(title = "Artem", description = "", image = "", ingredients = listOf(""), id = 1))
+                    coffees = response.body() ?: emptyList()
                 )
-            },{
+            },{ error ->
                 state.value = state.value?.copy(
-                    errorMessage = it.localizedMessage ?: "Something went wrong"
+                    errorMessage = error.localizedMessage ?: "Something went wrong"
                 )
             })
     }

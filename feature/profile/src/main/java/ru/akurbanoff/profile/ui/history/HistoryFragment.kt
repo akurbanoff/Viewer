@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import ru.akurbanoff.profile.R
 
-class HistoryFragment : Fragment() {
+internal class HistoryFragment : Fragment() {
 
     companion object {
         fun newInstance() = HistoryFragment()
